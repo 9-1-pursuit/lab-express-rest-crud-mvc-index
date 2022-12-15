@@ -6,11 +6,11 @@ const plans = require("./controllers/plans.controller");
 const specialEvents = require("./controllers/special-events.controller");
 const app = express();
 
-app.use("/equipment", equipment);
+app.use("/machines", equipment);
 
 app.use("/locations", locations);
 
-app.use("/people", people);
+app.use("/persons", people);
 
 app.use("/plans", plans);
 
