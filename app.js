@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 app.get("*", (req, res) => {
   //send a json response
-  res.status(404).json({ error: `Sorry, no page found` });
+  res.status(404).json({ error: `Sorry, no page found!` });
 });
 
 module.exports = app;
