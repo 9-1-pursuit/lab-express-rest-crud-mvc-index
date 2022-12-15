@@ -58,7 +58,7 @@ describe("Models are in correct folder and named correctly", () => {
   });
 });
 
-describe.only("Controllers are in correct folder and named correctly", () => {
+describe("Controllers are in correct folder and named correctly", () => {
   it("has a locations controller", () => {
     expect(fs.existsSync("./controllers/locations.controller.js")).toEqual(
       true
