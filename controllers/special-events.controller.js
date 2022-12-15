@@ -1,0 +1,1 @@
+const data = require("../model/special-event.model.js")
