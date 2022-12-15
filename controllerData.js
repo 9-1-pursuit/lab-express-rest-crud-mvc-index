@@ -4,7 +4,7 @@ module.exports = [
         data: require("./controllers/locations.controller.js"),
     },
     {
-        path: "/equipment",
+        path: "/machines",
         data: require("./controllers/machines.controller.js"),
     },
     {

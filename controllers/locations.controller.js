@@ -1,8 +1,8 @@
 const express = require("express")
 const locations = express.Router()
-const data = require("../model/location.model.js")
+const data = require("../models/location.model.js")
 const bonusData = [...require("../__tests__/sample-data").locations]
-const personData = require("../model/person.model.js")
+const personData = require("../models/person.model.js")
 
 locations.get("/", (req, resp) => {
     resp.send(data)
