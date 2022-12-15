@@ -15,6 +15,7 @@ locations.get("/people", (req, resp) => {
         acc[index].push(person)
         return acc
     }, [[], []])
+    
     bonusData.forEach(obj => {
         if(obj.zip === "11101"){
             obj.people = people

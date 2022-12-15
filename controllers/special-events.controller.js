@@ -6,5 +6,4 @@ specialEvents.get("/", (req, resp) => {
     resp.send(data)
 })
 
-
 module.exports = specialEvents

@@ -6,5 +6,4 @@ machines.get("/", (req, resp) => {
     resp.send(data)
 })
 
-
 module.exports = machines
