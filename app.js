@@ -18,5 +18,9 @@ app.use("/plans", plansController);
 app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
+app.get("*", (req, res) => {
+  //send a json response
+  res.status(404).json({ error: `Sorry, no page found` });
+});
 
 module.exports = app;
