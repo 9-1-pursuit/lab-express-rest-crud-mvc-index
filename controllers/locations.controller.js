@@ -28,4 +28,10 @@ locations.get("/people", (req, resp) => {
     resp.send(bonusData)
 })
 
+locations.get("/:index", (req, resp) =>{
+    const {index} = req.params
+    
+    data[index]? resp.send(data[index]) :resp.status(404).send({Error: "Sorry, no page found!"})
+})
+
 module.exports = locations
