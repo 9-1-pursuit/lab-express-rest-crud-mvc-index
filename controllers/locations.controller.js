@@ -1,2 +1,10 @@
+const express = require("express")
+const locations = express.Router()
 const data = require("../model/location.model.js")
-console.log(`locationData`,data)
+
+locations.get("/", (req, resp) => {
+    resp.send(data)
+})
+
+
+module.exports = locations
