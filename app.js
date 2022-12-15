@@ -13,10 +13,14 @@ const personController = require('./controllers/persons.controller')
 
 const plansController = require('./controllers/plans.controller')
 
-const specaillEvents = require('./controllers/special-events.controller')
+const specialEvents = require('./controllers/special-events.controller')
 
 //ROUTE
 app.use('/locations', locationController);
+app.use('/machines', machineController);
+app.use('/persons', personController );
+app.use('/plans', plansController);
+app.use('/special-events', specialEvents);
 
 //ERROR LOCATED HERE
 

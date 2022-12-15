@@ -11,4 +11,4 @@ location.get('/:index', (req, res) =>{
     res.json(locationArray[index])
 })
 
-module.exports.location
+module.exports = location
