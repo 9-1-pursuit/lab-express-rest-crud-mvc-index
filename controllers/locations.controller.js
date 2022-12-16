@@ -11,7 +11,6 @@ locations.get("/people", (req, res) => {
   const locationPeopleArr = [...locationsArr].map((el) => {
     return { ...el, people: "" };
   });
-
   personsArr.forEach((person) => {
     locationPeopleArr.forEach((el) => {
       if (person.mainLocation === el.zip) {
@@ -19,7 +18,6 @@ locations.get("/people", (req, res) => {
       }
     });
   });
-
   res.status(200).json(locationPeopleArr);
 });
 
