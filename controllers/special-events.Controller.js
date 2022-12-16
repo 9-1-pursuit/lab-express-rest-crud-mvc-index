@@ -7,7 +7,7 @@ specialEvents.get("/", (req, res) => {
   res.json(specialEventsArray)
 })
 
-// Show ROUTE
+// Show Route
 specialEvents.get("/:index", (req, res) => {
   const { index } = req.params
   res.json(specialEventsArray[index])
