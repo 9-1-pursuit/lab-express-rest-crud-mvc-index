@@ -14,8 +14,8 @@ app.use("/persons", personsController)
 const plansController = require("./controllers/plans.Controller")
 app.use("/plans", plansController)
 
-const specialEventsController = require("./controllers/specialEvents.Controller")
-app.use("/specialEvents", specialEventsController)
+const specialEventsController = require("./controllers/special-events.Controller")
+app.use("/special-events", specialEventsController)
 
 app.get("/", (req, res) => {
   res.send("Hello, world!")
