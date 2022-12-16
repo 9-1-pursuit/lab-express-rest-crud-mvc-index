@@ -9,13 +9,19 @@ const machinesController = require("./controllers/machines.Controller")
 app.use("/machines", machinesController)
 
 const personsController = require("./controllers/persons.Controller")
-app.use("")
+app.use("/persons", personsController)
+
+const plansController = require("./controllers/plans.Controller")
+app.use("/plans", plansController)
+
+const specialEventController = require("./controllers/specialEvents.Controller")
+app.use("/specialEvents", specialEventController)
 
 app.get("/", (req, res) => {
   res.send("Hello, world!")
 })
 
 app.get("*", (req, res) => {
-  res.status(404).sendn("Sorry, no page Found!")
+  res.status(404).send("Sorry, no page Found!")
 })
 module.exports = app

@@ -1,16 +1,16 @@
 const express = require("express")
-const plan = express.Router()
-const planArray = require("../models/plan")
+const plans = express.Router()
+const plansArray = require("../models/plan.model")
 
-// Get ROUTE for /bookmarks (app.use in app.js handles the entry point for the controller)
-plan.get("/", (req, res) => {
-  res.json(planArray)
+// Get ROUTE for /plan (app.use in app.js handles the entry point for the controller)
+plans.get("/", (req, res) => {
+  res.json(plansArray)
 })
 
 // Show Route
-plan.get("/:index", (req, res) => {
-  const [index] = req.params
-  res.json(planArray[index])
+plans.get("/:index", (req, res) => {
+  const { index } = req.params
+  res.json(plansArray[index])
 })
 
-module.exports = plan
+module.exports = plans
