@@ -2,10 +2,10 @@
 const express = require('express')
 const morgan = require('morgan')
 const locationsController = require('./controllers/locations.controller')
-// const machines = require('./controllers/machines.controller')
-// const persons = require('./controllers/persons.controller')
-// const plans = require('./controllers/plans.controller')
-// const specialEvents = require('./controllers/special-events.controller')
+const machinesController = require('./controllers/machines.controller')
+const personsController = require('./controllers/persons.controller')
+const plansController = require('./controllers/plans.controller')
+const specialEventsController = require('./controllers/special-events.controller')
 
 //CONFIGURATION
 const app = express()
@@ -13,14 +13,14 @@ const app = express()
 //MIDDLEWARE
 app.use(morgan('tiny'))
 app.use("/locations", locationsController)
-// app.use("/machines", machines.controller)
-// app.use("/persons", persons.controller)
-// app.use("/plans", plans.controller)
-// app.use("/special-events", special-events.controller)
+app.use("/machines", machinesController)
+app.use("/persons", personsController)
+app.use("/plans", plansController)
+app.use("/special-events", specialEventsController)
 
 //ROUTES
 app.get("/", (req, res) =>{
-    res.send(`Listening on port: ${PORT}`)
+    res.send("Hello, world!")
 })
 
 app.get("*", (req, res) => {

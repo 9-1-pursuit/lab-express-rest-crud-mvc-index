@@ -10,10 +10,11 @@ machines.get("/", (req, res)=>{
 
 //Get Route for one machine
 machines.get('/machine:index', (req, res) =>{
-    const {index} = req.params //deconstructing the request object aka "req", which contains the params value
-        
-    //this params in the backend, works just like useParams in React, grabbing a parameter value entered in the address bar to complete a get request
+    const {index} = req.params 
+    res.json(machinesData[index]) 
 })
 
 
-module.exports = machines.controller
+
+
+module.exports = machines

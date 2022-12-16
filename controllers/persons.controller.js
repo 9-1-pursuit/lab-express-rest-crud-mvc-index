@@ -10,10 +10,9 @@ persons.get("/", (req, res)=>{
 
 //Get Route for one person
 persons.get('/person:index', (req, res) =>{
-    const {index} = req.params //deconstructing the request object aka "req", which contains the params value
-        
-    //this params in the backend, works just like useParams in React, grabbing a parameter value entered in the address bar to complete a get request
+    const {index} = req.params 
+    res.json(personsData[index]) 
 })
 
 
-module.exports = persons.controller
+module.exports = persons
