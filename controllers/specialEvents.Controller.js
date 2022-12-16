@@ -1,6 +1,6 @@
 const express = require("express")
 const specialEvents = express.Router()
-const specialEventsArray = require("../models/special-event.model")
+const specialEventsArray = require("../models/special-events.model")
 
 // Get ROUTE for /specialEvent (app.use in app.js handles the entry point for the controller)
 specialEvents.get("/", (req, res) => {
