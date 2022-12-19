@@ -22,7 +22,7 @@ app.use('/persons', personController );
 app.use('/plans', plansController);
 app.use('/special-events', specialEvents);
 
-//ERROR LOCATED HERE
+//ERROR LOCATED HERE!
 
 app.get('/', (req, res)=>{
     res.send(`Hello, world!`)
